@@ -8,8 +8,18 @@ Read the article https://codeburst.io/learn-and-understand-recursion-in-javascri
 
 ```js
 // Test
-console.log(repeater('g')); // 'ggggg'
-console.log(repeater('j')); // 'jjjjj'
+function repeater(str) {
+  let n = 0;
+  let val = "";
+  if (n <= 5) {
+    val = val + str;
+    n += 1;
+    repeater(str);
+  }
+  return val;
+}
+console.log(repeater("g")); // 'ggggg'
+console.log(repeater("j")); // 'jjjjj'
 ```
 
 - Write a function named `loop` that loops through the numbers n down to 0. Each time it will log the value.
