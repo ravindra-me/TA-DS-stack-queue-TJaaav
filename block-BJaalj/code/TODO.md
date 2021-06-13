@@ -34,10 +34,10 @@ function binarySearch(list, val) {
     if (val === list[middle]) {
       return middle;
     }
-    if (val < list[middle]) {
-      upper = middle - 1;
-    } else {
+    if (list[middle] < val) {
       lower = middle + 1;
+    } else {
+      upper = middle - 1;
     }
   }
   return -1;
